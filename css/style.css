@@ -3,36 +3,29 @@
   --bg: #010101;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* About Section */
 .contact {
   padding: 10rem 7% 1.4rem;
 }
+
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
 }
+
 .contact h2 span {
   color: var(--primary);
 }
 
-/* Menu Section  */
-
 .contact h2 {
   margin-bottom: 1rem;
+}
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
 }
 
 /* Contact Section */
@@ -80,9 +73,6 @@ html {
   background-color: var(--primary);
   cursor: pointer;
 }
-
-/* Media Queries */
-
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -91,64 +81,6 @@ html {
 }
 /* Tablet */
 @media (max-width: 768px) {
-  html {
-    font-size: 62.5%;
-  }
-
-  #hamburger-menu {
-    display: inline-block;
-  }
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
-  }
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-  .navbar .navbar-nav a {
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
-
-  .about .row {
-    flex-wrap: wrap;
-  }
-  .about .row .about-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .about .row content {
-    padding: 0;
-  }
-
-  .about .row.content h3 {
-    margin-top: 1rem;
-    font-size: 1.6rem;
-  }
-
-  .about .row content p {
-    font-size: 1.6rem;
-  }
-  .menu p {
-    font-size: 1.2rem;
-  }
-
   .contact .row {
     flex-wrap: wrap;
   }
