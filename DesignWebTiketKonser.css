@@ -15,6 +15,16 @@ body {
 .navbar-nav li {
   margin: 0 10px;
 }
+.about-us h2 {
+  padding-left: 10px;
+}
+.about-us .about-img {
+  background-color: #a9a9a9;
+}
+.about-us {
+  margin: 2rem 2rem 2rem 2rem;
+  color: #fff;
+}
 .about-us .row-about {
   display: flex;
   padding-left: 0.5rem;
@@ -191,12 +201,15 @@ btn-KP:hover {
 .navbar-bottom {
   padding-top: 2rem;
   background-color: #a9a9a9;
-  padding-left: 6rem;
   padding-bottom: 1rem;
   width: auto;
 }
-.content-navbar-bottom {
+.navbar-bottom .content-navbar-bottom {
   text-align: center;
+}
+
+.navbar-bottom .row-navbar-bottom {
+  padding-left: 6rem;
 }
 .content-navbar-bottom .icon-navbar-bottom {
   padding-right: 1rem;
@@ -768,4 +781,3 @@ btn-KP:hover {
     display: block;
   }
 }
-
