@@ -49,7 +49,6 @@
     ></script>
   </head>
   <body>
-    <!-- Header -->
     <header
       class="header sticky-top"
       style="
@@ -58,7 +57,7 @@
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
       "
     >
-      <nav class="navbar navbar-expand-md navbar-light navbar-sm">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-sm">
         <a class="navbar-brand" href="web konser.html">
           <img
             src="img/Logo RK Concert Paling Bagus.png"
@@ -66,11 +65,23 @@
             style="display: auto; width: 120px; border-radius: 50%"
           />
         </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="web konser.html" style="color: white"
-                >BERANDA</a
+                >BERANDA <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
@@ -89,28 +100,23 @@
               >
             </li>
           </ul>
-          <form class="form-inline" style="padding-right: 4rem">
-            <div class="input-group">
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Cari konser"
-                style="width: 250px"
-                id="search-item"
-                onkeyup="search()"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline-secondary"
-                  type="submit"
-                  style="width: 70px; padding: 4px"
-                >
-                  Cari
-                </button>
-              </div>
-            </div>
+          <form class="form-inline" style="padding-bottom: 1rem">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Cari konser"
+              style="width: 250px"
+              id="search-item"
+              onkeyup="search()"
+            />
+            <input
+              type="submit"
+              id="mybtn"
+              value="cari"
+              class="btn btn-outline-secondary"
+              onclick="search()"
+            />
           </form>
-          <!-- <button type="button" class="btnLogin-popup" data-toggle="modal" data-target="exampleModalLong">🔒 | Login</button> -->
           <button
             type="button"
             class="btnLogin-popup btn-primary"
@@ -119,54 +125,9 @@
           >
             🔒 | Login
           </button>
-          <a href="#" class="action_btn">Mulai</a>
-          <div class="toggle_btn">
-            <i
-              class="fa-solid fa-bars"
-              style="color: whitesmoke; padding-right: 1rem"
-            ></i>
-          </div>
         </div>
       </nav>
-
-      <div class="dropdown_menu">
-        <li class="nav-item active">
-          <a class="nav-link" href="web konser.html" style="color: white"
-            >BERANDA</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="konser.html" style="color: white">KONSER</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tentang kami.html" style="color: white"
-            >TENTANG KAMI</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html" style="color: white"
-            >KONTAK KAMI</a
-          >
-        </li>
-        <li><a href="#" class="action_btn">Mulai</a></li>
-      </div>
     </header>
-    <!-- not found -->
-    <!-- <h2 class="text-center mt-2">product searcing</h2>
-    <input
-      type="text"
-      class="form-control mt-3 mx-auto"
-      id="myinput"
-      placeholder="Liver Searching"
-    />
-
-    <div class="container">
-      <h3 class="text-danger mt-5 text-center" id="para" style="display: none">
-        Not Found
-      </h3>
-      <div class="row mt-3" id="card"></div>
-    </div> -->
-    <!-- ENd not found -->
 
     <!-- LOGINREGISTER Modal - START -->
     <div
@@ -398,7 +359,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="tanggal" class="text-white">Tanggal</label>
-            <<input type="date" class="form-control" id="tanggal" />
+            <input type="date" class="form-control" id="tanggal" />
           </div>
           <div class="col-md-6 mb-3">
             <label for="genre" class="text-white">Genre Musik</label>
@@ -417,7 +378,7 @@
         </div>
         <button
           class="btn btn-primary btn-lg text-uppercase"
-          onchange="searchcb()"
+          onchange="tampilkan()"
         >
           Cari Konser
         </button>
@@ -840,19 +801,12 @@
           : "fa-solid fa-bars";
       };
     </script>
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
-    <!-- Our Script -->
-    <script>
-      $(document).ready(function () {
-        console.log("Im ready");
-      });
-    </script>
 
     <!-- JQuery -->
     <script
