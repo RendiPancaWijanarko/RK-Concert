@@ -18,16 +18,30 @@ body {
 
 /* ABOUT US - START */
 .about-us h2 {
+  text-align: center;
+  font-size: 3rem;
   padding-left: 10px;
+  margin-bottom: 2rem;
+}
+
+.about-us .row-about .content-tentang-kami {
+  flex: 1 135rem;
+  padding: 0 1rem;
 }
 
 .about-us {
-  margin: 2rem 2rem 2rem 2rem;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
   color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .about-us .row-about {
   display: flex;
   padding-left: 0.5rem;
+  text-align: justify;
 }
 .content-tentang-kami {
   padding-left: 1rem;
@@ -679,7 +693,7 @@ btn-KP:hover {
   background-color: #c4a360;
   color: black;
   border: none;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 10px 20px;
   font-size: 13px;
   font-weight: bold;
@@ -870,15 +884,13 @@ btn-KP:hover {
 /* BAGIAN LOGIN dan REGISTER - End*/
 
 /* responsive design */
-@media (max-width: 992px) {
-  .navbar .nav-link,
-  .navbar .action_btn {
-    display: none;
+@media (max-width: 758px) {
+  .about-us .row-about {
+    flex-wrap: wrap;
   }
-  .navbar .toggle_btn {
-    display: block;
-  }
-  .dropdown_menu {
-    display: block;
+  .about-us .row-about .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
   }
 }
