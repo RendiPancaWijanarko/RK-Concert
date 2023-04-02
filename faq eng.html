@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="DesignWebTiketKonser.css" />
     <!-- Feather Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -28,7 +32,7 @@
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
       "
     >
-      <nav class="navbar navbar-expand-md navbar-light navbar-sm">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-sm">
         <a class="navbar-brand" href="web konser.html">
           <img
             src="img/Logo RK Concert Paling Bagus.png"
@@ -36,11 +40,23 @@
             style="display: auto; width: 120px; border-radius: 50%"
           />
         </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="web konser.html" style="color: white"
-                >BERANDA</a
+                >BERANDA <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
@@ -59,57 +75,35 @@
               >
             </li>
           </ul>
-          <form class="form-inline" style="padding-right: 4rem">
-            <div class="input-group">
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Cari konser"
-                style="width: 250px"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-outline-secondary"
-                  type="submit"
-                  style="width: 70px; padding: 4px"
-                >
-                  Cari
-                </button>
-              </div>
-            </div>
+          <form class="form-inline" style="padding-bottom: 1rem">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Cari konser"
+              style="width: 250px"
+              id="search-item"
+              onkeyup="search()"
+            />
+            <input
+              type="submit"
+              id="mybtn"
+              value="cari"
+              class="btn btn-outline-secondary"
+              onclick="search()"
+            />
           </form>
-          <a href="#" class="action_btn">Mulai</a>
-          <div class="toggle_btn">
-            <i
-              class="fa-solid fa-bars"
-              style="color: whitesmoke; padding-right: 1rem"
-            ></i>
-          </div>
+          <button
+            type="button"
+            class="btnLogin-popup btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModalLong"
+          >
+            🔒 | Login
+          </button>
         </div>
       </nav>
-
-      <div class="dropdown_menu">
-        <li class="nav-item active">
-          <a class="nav-link" href="web konser.html" style="color: white"
-            >BERANDA</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="konser.html" style="color: white">KONSER</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tentang kami.html" style="color: white"
-            >TENTANG KAMI</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html" style="color: white"
-            >KONTAK KAMI</a
-          >
-        </li>
-        <li><a href="#" class="action_btn">Mulai</a></li>
-      </div>
     </header>
+
     <!-- Section refund start -->
     <section class="faq">
       <a href="faq.html" style="padding-left: 4rem; text-decoration: underline">
@@ -192,7 +186,7 @@
       </div>
     </section>
     <!-- End Bar Bawah -->
-
+    <script src="scriptLOGINREGISTER.js"></script>
     <!-- Social buttons -->
     <hr />
     <!-- Footer Links -->
