@@ -9,7 +9,6 @@ const search = () => {
   const storeitem = document.getElementById("konser");
   const product = document.querySelectorAll(".card");
   const pname = storeitem.getElementsByTagName("h5");
-
   for (var i = 0; i < pname.length; i++) {
     let match = product[i].getElementsByTagName("h5")[0];
 
@@ -20,6 +19,9 @@ const search = () => {
         product[i].style.display = "";
       } else {
         product[i].style.display = "none";
+      }
+      if ((searchbox.value = "")) {
+        display = storeitem;
       }
     }
   }
