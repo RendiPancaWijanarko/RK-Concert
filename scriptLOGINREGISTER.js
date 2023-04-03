@@ -62,7 +62,7 @@ document.querySelectorAll(".btn-KP").forEach((item) => {
     document.querySelector(".modalimage").innerHTML = "";
     document.querySelector(".modalimage").appendChild(image);
 
-    const nohp = "6285942966129";
+    const nohp = "6285942966128";
     let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text= halo saya mau beli tiket ini ${gambar}`;
 
     document.querySelector(".btnbeli").href = pesan;
